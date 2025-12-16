@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD SECTION -->
+  <head>
+    <title>Hostor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- CUSTOM TAILWIND STYLES -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main: #3a67de;
+        --font-outfit: "Outfit", sans-serif;
+        --font-merri: "Merriweather", serif;
+        --color-hover: #2555da;
+        --color-graytext: #a5a5a5;
+      }
+
+      body {
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <!-- BODY START -->
+  <body class="px-52 py-[56px]">
+    <div class="container mx-auto">
+      <!-- TOP NAVIGATION -->
+      <div class="top-nav flex justify-between pb-[77px]">
+        <!-- BACK BUTTON -->
+        <button
+          class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[271px] h-[60px] bg-main justify-center gap-[20px] rounded-[20px] items-center"
+        >
+          <svg
+            width="36"
+            height="22"
+            viewBox="0 0 36 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
+              fill="white"
+            />
+          </svg>
+
+          <div class="text-white text-[20px] font-outfit">Create event</div>
+        </button>
+
+        <!-- HOME BUTTON -->
+        <button
+          class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
+        >
+          <svg
+            width="32"
+            height="25"
+            viewBox="0 0 32 25"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
+              fill="#E3E3E3"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="viewBox">
+        <!-- PAGE HEADER TEXT -->
+        <div class="text-container pb-[20px] w-[826px] mx-auto">
+          <div class="font-medium text-2xl pb-[5px] font-outfit">
+            Create your event
+          </div>
+          <p class="font-bold text-[17px] text-main font-merri">
+            Quickly create your event with all the important information so you
+            can start planning right away.
+          </p>
+        </div>
+        <!-- EVENT FORM -->
+        <div
+          class="eventbox creat-even w-[826px] h-[506px] bg-main mx-auto rounded-[20px] p-[40px] flex flex-col gap-[10px]"
+        >
+          <!-- EVENT TITLE INPUT -->
+          <div class="flex gap-[20px] justify-between">
+            <div class="eventtitle">
+              <div
+                class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+              >
+                Event title
+              </div>
+              <input
+                id="eventTitle"
+                name="title"
+                type="text"
+                class="w-[410px] h-[42px] bg-white rounded-[5px] pl-[15px] placeholder-graytext text-base font-outfit text-main"
+                placeholder="Parker party"
+              />
+            </div>
+
+            <!-- EVENT TYPE DROPDOWN -->
+            <div class="eventtypes">
+              <div
+                class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+              >
+                Event types
+              </div>
+              <div class="selection flex relative">
+                <select
+                  id="eventType"
+                  name="type"
+                  class="w-[310px] h-[42px] bg-white rounded-[5px] font-outfit flex text-main pl-[15px] pr-[40px] appearance-none"
+                >
+                  <option value="">Select Event Type</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="birthday">Birthday Party</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="conference">Conference</option>
+                  <option value="social">Social Gathering</option>
+                  <option value="other">Other</option>
+                </select>
+                <div
+                  class="selectIcon absolute right-[15px] top-1/2 -translate-y-1/2 pointer-events-none"
+                >
+                  <!-- use flex her to justify the svg  -->
+                  <!--  -->
+                  <!--  -->
+                  <!--  -->
+                  <!--  -->
+                  <!--  -->
+                  <svg
+                    width="18"
+                    height="10"
+                    viewBox="0 0 18 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.888 8.52648C9.73513 9.60352 7.945 9.60352 6.7921 8.52648L0.48249 2.63203C-0.160965 2.03091 -0.160965 1.01064 0.48249 0.409525C1.06691 -0.136439 1.97434 -0.136439 2.55876 0.409525L6.7921 4.36432C7.945 5.44136 9.73514 5.44136 10.888 4.36432L15.1214 0.409524C15.7058 -0.13644 16.6132 -0.136439 17.1976 0.409525C17.8411 1.01064 17.8411 2.03091 17.1976 2.63203L10.888 8.52648Z"
+                      fill="#3a67de"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIME AND DATE INPUTS -->
+          <div class="flex gap-[20px] justify-between">
+            <div class="time">
+              <div
+                class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+              >
+                Time
+              </div>
+              <input
+                id="eventTime"
+                name="time"
+                class="w-[310px] h-[42px] bg-white rounded-[5px] text-center font-outfit text-main"
+                type="time"
+              />
+            </div>
+
+            <div class="Date">
+              <div
+                class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+              >
+                Date
+              </div>
+              <input
+                id="eventDate"
+                name="date"
+                class="w-[410px] h-[42px] bg-white rounded-[5px] text-center font-outfit text-main"
+                type="date"
+              />
+            </div>
+          </div>
+
+          <!-- <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+      <select id="currency" name="currency" aria-label="Currency" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-gray-800 py-1.5 pr-7 pl-3 text-base text-gray-400 *:bg-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+        <option>AM</option>
+        <option>PM</option>
+      </select>
+      <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4">
+        <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+      </svg>
+    </div> -->
+
+          <!-- NUMBER OF GUESTS INPUT -->
+          <div class="guest amount">
+            <div
+              class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+            >
+              Number of guest
+            </div>
+            <input
+              id="guestCount"
+              name="guests"
+              class="w-full h-[42px] bg-white rounded-[5px] text-center font-outfit text-main [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              type="number"
+              min="1"
+            />
+          </div>
+
+          <!-- BUDGET INPUT -->
+          <div class="budget">
+            <div
+              class="text-white font-semibold text-xl font-outfit tracking-wide pb-[10px]"
+            >
+              budget
+            </div>
+            <div
+              class="flex items-center bg-white pl-3 rounded-[5px] w-full h-[42px]"
+            >
+              <div class="text-base text-main select-none sm:text-sm/6">$</div>
+              <input
+                id="budget"
+                name="budget"
+                type="number"
+                step="0.01"
+                min="0"
+                placeholder="0.00"
+                class="block grow bg-white pl-1 text-base text-main placeholder:text-graytext font-outfit outline-none"
+              />
+            </div>
+          </div>
+
+          <!-- CREATE BUTTON -->
+          <button
+            class="w-full h-[42px] font-bold text-main font-outfit bg-white rounded-[5px] mt-[20px] flex cursor-pointer justify-center items-center font-semibold"
+          >
+            <div>CREATE</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
