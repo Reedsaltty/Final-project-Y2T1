@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hostor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main: #3a67de;
+        --font-outfit: "Outfit", sans-serif;
+        --font-merri: "Merriweather", serif;
+        --color-hover: #2555da;
+        --color-graytext: #a5a5a5;
+        --color-whiteButtonHover: #e7e7e7;
+      }
+      body {
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <body class="px-52 py-[56px]">
+    <div class="container">  
+        <div class="top-nav flex justify-between pb-[77px]">
+        <button
+          class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[271px] h-[60px] bg-main justify-center gap-[20px] rounded-[20px] items-center"
+        >
+          <svg
+            width="36"
+            height="22"
+            viewBox="0 0 36 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
+              fill="white"
+            />
+          </svg>
+
+          <div class="text-white text-[20px] font-outfit">Timelines & tasks</div>
+        </button>
+
+        <button
+          class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
+        >
+          <svg
+            width="32"
+            height="25"
+            viewBox="0 0 32 25"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
+              fill="#E3E3E3"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
