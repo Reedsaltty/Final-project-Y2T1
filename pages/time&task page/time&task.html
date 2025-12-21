@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hostor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main: #3a67de;
+        --font-outfit: "Outfit", sans-serif;
+        --font-merri: "Merriweather", serif;
+        --color-hover: #2555da;
+        --color-graytext: #a5a5a5;
+        --color-whiteButtonHover: #e7e7e7;
+        --color-green : #23F40B ;
+      }
+      body {
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <body class=" xl:px-53 md:px-10 min-sm:px-10 max-sm:px-10  py-[56px] ">
+    <!-- TOP NAVIGATION -->
+    <div class="top-nav flex justify-between pb-[77px] w-full">
+      <!-- BACK BUTTON -->
+      <button
+        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-[20px] max-sm:gap-[10px] rounded-[20px] items-center"
+      >
+        <svg
+          width="36"
+          height="22"
+          viewBox="0 0 36 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
+            fill="white"
+          />
+        </svg>
+
+        <div class="text-white text-[20px] font-outfit max-sm:text-base ">Time & Task</div>
+      </button>
+
+      <!-- HOME BUTTON -->
+      <button
+        class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
+      >
+        <svg
+          width="32"
+          height="25"
+          viewBox="0 0 32 25"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
+            fill="#E3E3E3"
+          />
+        </svg>
+      </button>
+    </div>
+
+
+    <div class="viewbox grid grid-cols-2 max-sm:grid-cols-1 gap-10">
+      <div class="line1 flex flex-col gap-10">
+        
+        <form id="timeActivityForm" class="viewbox[0]">
+          <div class="text-container pb-[20px]">
+          <div class="font-medium text-2xl pb-[5px] font-outfit">
+            Event timelines
+          </div>
+          <p class="font-bold text-[17px] text-main font-merri">
+            Visualize your entire event flow with a structured timeline.
+          </p>
+        </div>
+          <div
+            class="w-full h-[315px] bg-main rounded-[20px] flex flex-col gap-5 px-4 tracking-wide font-outfit justify-center"
+          >
+            <div class="flex flex-col gap-2">
+              <div class="text-white text-2xl font-medium">Time</div>
+              <div
+                class="w-full bg-white h-[52px] flex items-center justify-center gap-1 rounded-[10px]"
+              >
+                <input
+                  type="number"
+                  name="hour"
+                  placeholder="--"
+                  class="text-main text-2xl outline-none w-[28px] bg-transparent [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none text-center"
+                  min="0"
+                  max="12"
+                  value="12"
+                />
+                <span class="w-[10px] text-center">/</span>
+                <input
+                  type="number"
+                  name="minute"
+                  placeholder="--"
+                  class="text-main text-2xl outline-none w-[28px] bg-transparent [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none text-center"
+                  min="0"
+                  max="59"
+                  value="59"
+                />
+                <select
+                  name="period"
+                  class="w-[50px] h-[50%] text-center bg-main text-white rounded-[5px]"
+                >
+                  <option>AM</option>
+                  <option>PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="text-white text-2xl font-medium">Activity</div>
+              <input
+                type="text"
+                name="activity"
+                placeholder="Eg:Meeting"
+                class="placeholder:text-graytext w-full h-[52px] bg-white rounded-[10px] text-base tracking-wide pl-4 outline-none"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full h-[40px] bg-white active:bg-white hover:bg-whiteButtonHover rounded-[10px] font-extrabold text-main text-xl self-center"
+            >
+              +ADD
+            </button>
+
+          </div>
+        </form>
+        <div class="w-full h-[400px] outline-1 outline-graytext shadow-xl rounded-[20px] font-outfit flex flex-col gap-8  " >
+          <div class="font-extrabold text-2xl self-center pt-8">TIMELINE</div>
+          <div class="pl-8 text">
+            <div class="flex gap-8 items-center">
+              <div class="w-[20px] h-[20px] rounded-2xl bg-main"></div>
+              <span class="font-light ">Serve Food</span> 
+              <div class="bg-main text-white px-1 self-center">
+                <span>11</span>
+                <span>:</span>
+                <span>00</span>
+                <span>AM</span>
+              </div>
+            </div>
+          </div>
+          <div class="pl-8 text">
+            <div class="flex gap-8 items-center">
+              <div class="w-[20px] h-[20px] rounded-2xl bg-main"></div>
+              <span class="font-light ">Serve Food</span> 
+              <div class="bg-main text-white px-1 self-center">
+                <span>11</span>
+                <span>:</span>
+                <span>00</span>
+                <span>AM</span>
+              </div>
+            </div>
+          </div>
+          <div class="pl-8 text">
+            <div class="flex gap-8 items-center">
+              <div class="w-[20px] h-[20px] rounded-2xl bg-main"></div>
+              <span class="font-light ">Serve Food</span> 
+              <div class="bg-main text-white px-1 self-center">
+                <span>11</span>
+                <span>:</span>
+                <span>00</span>
+                <span>AM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line2 flex flex-col gap-10 ">
+        <form>
+          <div class="text-container pb-[20px]">
+          <div class="font-medium text-2xl pb-[5px] font-outfit">
+            Enjoy tasks
+          </div>
+          <p class="font-bold text-[17px] text-main font-merri">
+            Manage your event tasks with precision and clarity.
+          </p>
+        </div>
+        <div class="viewbox[1] font-outfit">
+          <div class="w-full h-[210px] bg-main rounded-[20px] flex flex-col justify-center px-4 gap-5">
+            <div class="flex flex-col gap-2">
+              <div class="text-white text-2xl font-medium">Activity</div>
+              <input
+                type="text"
+                name="activity"
+                placeholder="Eg:Meeting"
+                class="placeholder:text-graytext w-full h-[52px] bg-white rounded-[10px] text-base tracking-wide pl-4 outline-none"
+              />
+            </div>
+            <button type="submit" class="w-[100px] h-[35px] font-semibold  bg-white rounded-[10px] text-main ">Enter</button>
+        
+            </div>
+          </div>
+        </form>
+         <div class="w-full h-[400px] outline-1 outline-graytext shadow-xl rounded-[20px] font-outfit flex flex-col gap-8  " >
+        <div class="font-extrabold text-2xl self-center pt-8">Task</div>
+         <div class="pl-8">
+            <label class="flex items-center gap-8 cursor-pointer">
+              <input type="checkbox" class="peer hidden" />
+               <div class="w-[40px] h-[20px] rounded-[6px] outline outline-1 outline-graytext flex items-center justify-center relative peer-checked:bg-green">
+                  <div class="w-[38px] h-[18px] rounded-[5px] bg-transparent outline-1 outline-white" ></div>
+              </div> 
+              <span class="font-light text-black">Invite Mr. Beast</span>
+            </label>
+          </div>
+         <div class="pl-8">
+            <label class="flex items-center gap-8 cursor-pointer">
+              <input type="checkbox" class="peer hidden" />
+               <div class="w-[40px] h-[20px] rounded-[6px] outline outline-1 outline-graytext flex items-center justify-center relative peer-checked:bg-green">
+                  <div class="w-[38px] h-[18px] rounded-[5px] bg-transparent outline-1 outline-white" ></div>
+              </div> 
+              <span class="font-light text-black">Invite Mr. Beast</span>
+            </label>
+          </div>
+         <div class="pl-8">
+            <label class="flex items-center gap-8 cursor-pointer">
+              <input type="checkbox" class="peer hidden" />
+               <div class="w-[40px] h-[20px] rounded-[6px] outline outline-1 outline-graytext flex items-center justify-center relative peer-checked:bg-green">
+                  <div class="w-[38px] h-[18px] rounded-[5px] bg-transparent outline-1 outline-white" ></div>
+              </div> 
+              <span class="font-light text-black">Invite Mr. Beast</span>
+            </label>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
