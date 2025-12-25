@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Outfit", sans-serif;
+    color: #111;
+    background: #fff;
+}
+main {
+    flex: 1;
+}
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 2rem;
+    position: relative;
+}
+
+.header_logo {
+    width: 140px;
+}
+
+/* hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #111;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* nav */
+.header_nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header_nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: grey;
+    font-family: "Outfit", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.header_nav .active {
+    font-weight: 700;
+    color: black;
+}
+
+.header_nav a:hover {
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* header buttons */
+.header_btns a {
+    padding: 10px 16px;
+    font-family: "Outfit", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn_login {
+    color: black;
+    font-weight: 700;
+}
+
+.btn_signup {
+    color: white;
+    background-color: #3A67DE;
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+.btn_login:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn_signup:hover {
+    background-color: #2d4ebd;
+}
+
+.hero {
+    background: linear-gradient(to right, #3A67DE 60%, #1F3878);
+    padding: 160px 20px 210px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.hero h1 {
+    font-family: "Outfit", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    margin: 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-team-image {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    margin-top: -120px;
+    position: relative;
+    z-index: 10;
+    background: white;
+    padding: 15px;
+}
+
+.about-content {
+    margin-top: 60px;
+    padding: 50px 60px;
+    background: white;
+    text-align: left;
+    width: 100%;
+    max-width: 900px;
+}
+
+.about-content h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 36px;
+    color: #3A67DE;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-family: "Merriweather", serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================
+   RESPONSIVE MEDIA QUERIES
+   =========================== */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 1.5rem;
+    }
+
+    .header_nav {
+        gap: 1.5rem;
+    }
+
+    .header_nav a {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 100px 20px 160px;
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .our-team-image {
+        max-width: 500px;
+        margin-top: -100px;
+    }
+
+    .about-content {
+        padding: 40px 50px;
+        margin-top: 50px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+}
+
+/* Small tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        padding: 15px 1rem;
+        gap: 1rem;
+    }
+
+    .header_logo {
+        width: 120px;
+    }
+
+    .header_nav a {
+        font-size: 14px;
+    }
+
+    .header_btns {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 80px 20px 140px;
+        min-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-container {
+        padding: 0 30px 60px;
+    }
+
+    .our-team-image {
+        max-width: 450px;
+        margin-top: -80px;
+    }
+
+    .about-content {
+        padding: 35px 40px;
+        margin-top: 40px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .paragraph {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+    header {
+        padding: 12px 1rem;
+        flex-wrap: nowrap;
+    }
+
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+        order: 1;
+    }
+
+    .header_logo {
+        width: 100px;
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .header_btns {
+        order: 3;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .header_btns a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Hide nav by default on mobile */
+    .header_nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        z-index: 1000;
+        gap: 1.5rem;
+    }
+
+    /* Show nav when active */
+    .header_nav.active {
+        left: 0;
+    }
+
+    .header_nav a {
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 15px 120px;
+        min-height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .about-container {
+        padding: 0 20px 50px;
+    }
+
+    .our-team-image {
+        max-width: 100%;
+        margin-top: -70px;
+        padding: 12px;
+    }
+
+    .about-content {
+        padding: 30px 25px;
+        margin-top: 35px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+}
+

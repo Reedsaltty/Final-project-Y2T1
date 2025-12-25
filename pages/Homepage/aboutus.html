@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LEO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=Raleway:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header class="header">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img src="logo.png" alt="logo" class="header_logo" />
+        <nav class="header_nav" id="navMenu">
+            <a href="landingpage.html" target="_self">Home</a>
+            <a href="aboutus.html" target="_self" class="active">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="inventory.html">Inventory</a>
+        </nav>
+        <div class="header_btns">
+            <a href="login.html" class="btn_login">Login</a>
+            <a href="signup.html" class="btn_signup">Sign Up</a>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-container">
+            <img src="team.webp" alt="Our Team" class="our-team-image">
+            <div class="about-content">
+                <h2>Welcome to LEO!</h2>
+                <p class="paragraph"> 
+                    Welcome to LEO, your ultimate event planning companion! Founded in 2024 by a team of passionate event planners and tech enthusiasts, LEO was created to simplify the complex process of organizing events. Our mission is to empower individuals and organizations to plan memorable events with ease and efficiency.
+                </p>
+                <p class="paragraph">
+                    At LEO, we understand that planning an event can be overwhelming. From managing guest lists to coordinating vendors, tracking budgets, and creating timelines, there are countless details to keep track of. That's why we built a comprehensive platform that brings all these tools together in one intuitive interface.
+                </p>
+                <p class="paragraph">
+                    Our platform offers powerful features including intelligent guest management, personalized venue suggestions, detailed timeline planning, and real-time budget tracking. Whether you're organizing a corporate conference, wedding celebration, birthday party, or community gathering, LEO provides the tools you need to make your event a success.
+                </p>
+                <p class="paragraph">
+                    We believe that great events create lasting memories, and our team is dedicated to helping you bring your vision to life. Join thousands of satisfied event planners who trust LEO to make their events extraordinary.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

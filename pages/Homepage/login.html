@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LEO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=Raleway:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style-auth.css">
+</head>
+
+<body>
+    <header class="header">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img src="logo.png" alt="logo" class="header_logo" />
+        <nav class="header_nav" id="navMenu">
+            <a href="landingpage.html" target="_self">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="inventory.html">Inventory</a>
+        </nav>
+        <div class="header_btns">
+            <a href="login.html" class="btn_login">Login</a>
+            <a href="signup.html" class="btn_signup">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-hero">
+            <h1>Welcome back</h1>
+            <p>Access your dashboard to keep every event detail on track.</p>
+        </section>
+
+        <section class="auth-wrapper">
+            <div class="auth-card">
+                <div class="auth-copy">
+                    <h2>Plan with confidence</h2>
+                    <p>Sign in to manage guest lists, track budgets, and finalize timelines from a single, streamlined
+                        workspace.</p>
+                </div>
+                <form class="auth-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <div class="auth-actions">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember">
+                            <span>Keep me signed in</span>
+                        </label>
+                        <a href="#" class="secondary-link">Forgot password?</a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <button type="submit" class="primary_btn">Login</button>
+                    <p class="alt-action">New to LEO? <a href="signup.html" class="secondary-link">Create an account</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 MVP | Privacy Policy | Terms of Service | Contact Us
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
