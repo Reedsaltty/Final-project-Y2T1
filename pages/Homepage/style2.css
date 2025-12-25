@@ -12,6 +12,7 @@ body {
     color: #111;
     background: #fff;
 }
+
 main {
     flex: 1;
 }
@@ -185,6 +186,21 @@ header {
 .paragraph:last-child {
     margin-bottom: 0;
 }
+
+/* footer */
+footer {
+    background: radial-gradient(circle at 10% 10%, #3A67DE 0%, #1F3878 100%);
+    width: 100%;
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Merriweather", sans-serif;
+    font-size: 14px;
+    padding: 0 1rem;
+}
+
 
 /* ===========================
    RESPONSIVE MEDIA QUERIES
@@ -382,4 +398,3 @@ header {
         text-align: left;
     }
 }
-
