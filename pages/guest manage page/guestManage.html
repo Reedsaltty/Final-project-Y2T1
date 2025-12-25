@@ -26,87 +26,80 @@
       }
     </style>
   </head>
-  <body class=" px-10  py-[56px] ">
-          <!-- TOP NAVIGATION -->
-     <div class="top-nav flex justify-between pb-[77px] w-full">
+  <body class="px-10 py-[56px]">
+    <!-- TOP NAVIGATION -->
+    <div id="topNav" class="top-nav flex justify-between pb-[77px] w-full">
       <!-- BACK BUTTON -->
-      <button
-        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-[20px] max-sm:gap-1 rounded-[20px] items-center"
+      <a
+        href="../eventcreation/evCreat.html"
+        id="backBtn"
+        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-[20px] max-sm:gap-1 max-md:gap-2 rounded-[20px] items-center"
       >
-      <div class="w-[36px] h-[22px] max-sm:w-[28px] max-sm:h-[10px]  max-sm:pl-1">
-         <svg
-          viewBox="0 0 36 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
-            fill="white"
-          />
-        </svg>
-</div>
-       
-        <div class="text-white text-[20px] font-outfit max-sm:text-xs ">Guest management</div>
-      </button>
+        <div class="w-[36px] h-[22px] max-sm:w-[28px] max-sm:h-[10px] max-sm:pl-1 ">
+          <svg viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div class="text-white text-[20px] font-outfit max-sm:text-xs">Guest management</div>
+      </a>
 
       <!-- HOME BUTTON -->
-      <button
+      <a 
+      href="../homepage/home.html"
+        id="homeBtn"
         class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
       >
-        <svg
-          width="32"
-          height="25"
-          viewBox="0 0 32 25"
-          fill="white"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="32" height="25" viewBox="0 0 32 25" fill="white" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
             fill="#E3E3E3"
           />
         </svg>
-      </button>
+      </a>
     </div>
 
-
-    <div class="viewBox">
+    <div id="viewBox" class="viewBox">
       <div class="text-container pb-[20px]">
-        <div class="font-medium text-2xl pb-[5px] font-outfit">
-          Invitation Handling
-        </div>
+        <h1 class="font-medium text-2xl pb-[5px] font-outfit">Invitation Handling</h1>
         <p class="font-bold text-[17px] text-main font-merri">
-          Helps you send invitations easily and makes sure every guest is well
-          taken care of before and during your event.
+          Helps you send invitations easily and makes sure every guest is well taken care of before and during your event.
         </p>
       </div>
-      <div class="guestmanage flex flex-col gap-10">
+
+      <div id="guestManage" class="guestmanage flex flex-col gap-10">
+        <!-- ADD GUEST SECTION -->
         <div
+          id="guestAdder"
           class="guestadder w-full h-[160px] max-sm:h-[300px] bg-main rounded-[20px] px-[48px] py-[33px] font-outfit text-white"
         >
-          <div class="text text-2xl font-medium tracking-wide block pb-[16px]">
-            Add new guest
-          </div>
-          <div class="flex justify-between max-sm:flex-col max-sm: gap-2">
+          <div class="text text-2xl font-medium tracking-wide block pb-[16px]">Add new guest</div>
+          <div class="flex justify-between max-sm:flex-col max-sm:gap-2">
             <input
+              id="guestName"
               type="text"
               class="font-normal w-[40%] max-sm:w-full h-[52px] bg-white pl-[15px] text-main font-outfit rounded-[5px] placeholder-graytext outline-none"
               placeholder="Peter"
             />
             <input
+              id="guestEmail"
               type="email"
               class="font-normal w-[40%] max-sm:w-full h-[52px] bg-white pl-[15px] text-main font-outfit rounded-[5px] placeholder-graytext outline-none"
               placeholder="fake@email.com"
             />
             <button
+              id="addGuestBtn"
               class="font-extrabold w-[15%] max-sm:w-full h-[52px] text-center bg-white text-main rounded-[5px] cursor-pointer hover:bg-whiteButtonHover active:bg-white"
             >
               <div>+ ADD</div>
             </button>
           </div>
         </div>
-        <div
-          class="invitebox w-full h-[140px] bg-white shadow-lg rounded-[20px]"
-        >
+
+        <!-- GUEST LIST SECTION -->
+        <div id="inviteBox" class="invitebox w-full min-h-[140px] bg-white shadow-lg rounded-[20px]">
           <div
             class="w-full max-md:text-base h-[60px] bg-main rounded-t-[20px] grid grid-cols-4 grid-rows-1 font-outfit text-2xl text-white font-medium justify-items-center items-center"
           >
@@ -115,78 +108,51 @@
             <div>Status</div>
             <div>Update Status</div>
           </div>
-          <div class="text-xl max-sm:text-xs">
-            <div
-              class="grid grid-cols-4 grid-rows-1 font-outfit  text-main font-normal justify-items-center items-center pt-5 "
-            >
-              <div>Peter</div>
-              <div>fake@email.com</div>
-              <div>Pending</div>
-              <div
-                class="flex  w-[70%]  md:w-[50%] max-sm:w-[80%] h-[24px] bg-main text-white font-medium text-base rounded-[3px] pl-3 relative
-                max-sm:text-xs "
-              >
-                <select
-                  id="pendingType"
-                  name="pending"
-                  class="appearance-none bg-transparent w-full outline-none cursor-pointer"
-                >
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>Maybe</option>
-                </select>
-                <div class="absolute right-[8px] top-[8px] pointer-events-none ">
-                  <svg
-                    width="16"
-                    height="9"
-                    viewBox="0 0 16 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.1239 8.07599C8.94173 9.31639 6.96257 9.31639 5.78044 8.07599L0.396145 2.42634C-0.132393 1.87175 -0.132394 0.999884 0.396144 0.445297C0.96189 -0.148331 1.90907 -0.148331 2.47482 0.445297L5.78044 3.91383C6.96257 5.15423 8.94172 5.15423 10.1239 3.91383L13.4295 0.445297C13.9952 -0.148332 14.9424 -0.148331 15.5082 0.445297C16.0367 0.999884 16.0367 1.87175 15.5082 2.42634L10.1239 8.07599Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
+          <div id="guestList" class="text-xl max-sm:text-xs">
+            <!-- Guest rows will be added here dynamically -->
+            
           </div>
         </div>
-        <div class="totalList flex justify-between">
+
+        <!-- STATISTICS SECTION -->
+        <div id="totalList" class="totalList flex justify-between">
           <div
             class="w-[21%] h-[75px] max-sm:text-[10px] rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
           >
             <div>Total guest</div>
-            <div>2</div>
+            <div id="totalGuests">2</div>
           </div>
           <div
             class="w-[21%] h-[75px] max-sm:text-[10px] rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
           >
             <div>Unverified</div>
-            <div>2</div>
+            <div id="unverifiedCount">2</div>
           </div>
           <div
             class="w-[21%] h-[75px] max-sm:text-[10px] rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
           >
             <div>Attending</div>
-            <div>2</div>
+            <div id="attendingCount">2</div>
           </div>
           <div
             class="w-[21%] h-[75px] max-sm:text-[10px] rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
           >
             <div>Not attending</div>
-            <div>2</div>
+            <div id="notAttendingCount">2</div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="flex justify-end mt-20">
       <a
+        id="nextPageBtn"
         class="w-[212px] max-sm:w-[100px] h-[50px] max-sm:h-[35px] bg-main text-white text-xl max-sm:text-xs font-outfit font-extrabold rounded-[5px] flex justify-center items-center cursor-pointer active:bg-main hover:bg-hover"
         href="../Venue page/venuepage.html"
       >
         <div>NEXT PAGE</div>
+      </a>
     </div>
+    <script src="guestManage.js" ></script>
   </body>
 </html>

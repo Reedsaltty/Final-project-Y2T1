@@ -29,34 +29,42 @@
   </head>
   <body class="px-10 py-[56px]">
     <!-- TOP NAVIGATION -->
-   <div class="top-nav flex justify-between pb-[77px] w-full">
+   <nav id="topNav" class="top-nav flex justify-between pb-[77px] w-full">
       <!-- BACK BUTTON -->
       <button
-        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-[20px] max-sm:gap-[10px] rounded-[20px] items-center"
+        id="backButton"
+        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-5 max-sm:gap-2  max-md:gap-2 rounded-[20px] items-center"
       >
-        <svg
-          width="36"
-          height="22"
-          viewBox="0 0 36 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <a
+        href="../guest manage page/guestManage.html"
+          class="w-[36px] h-[22px] max-sm:w-[28px] max-sm:h-[10px] max-sm:pl-1"
         >
-          <path
-            d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
-            fill="white"
-          />
-        </svg>
+          <svg
+            viewBox="0 0 36 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
+              fill="white"
+            />
+          </svg>
+        </a>
 
-        <div class="text-white text-[20px] font-outfit max-sm:text-base ">Venue</div>
+        <span id="backButtonText" class="text-white text-xl font-outfit max-md:text-sm">
+          Venue
+        </span>
       </button>
 
       <!-- HOME BUTTON -->
-      <button
+      <a
+      href="../homepage/home.html"
+        id="homeButton"
         class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
       >
         <svg
-          width="32"
-          height="25"
+          width="28"
+          height="21"
           viewBox="0 0 32 25"
           fill="white"
           xmlns="http://www.w3.org/2000/svg"
@@ -66,14 +74,14 @@
             fill="#E3E3E3"
           />
         </svg>
-      </button>
-    </div>
+      </a>
+    </nav>
 
     <div class="viewBox">
       <div class="text-container pb-[20px]">
-        <div class="font-medium text-2xl pb-[5px] font-outfit">
+        <h1 class="font-medium text-2xl pb-[5px] font-outfit">
           Event timelines
-        </div>
+        </h1>
         <p class="font-bold text-[17px] text-main font-merri">
           Choose a space that fits your style and needs.
         </p>
@@ -102,7 +110,7 @@
 
             <div class="h-[42px] bg-white rounded-[10px] relative">
               <select
-                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none"
+                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none outline-none"
               >
                 <option value="">Select Province</option>
                 <option value="Phnom Penh">Phnom Penh</option>
@@ -168,7 +176,7 @@
 
             <div class="h-[42px] bg-white rounded-[10px] relative">
               <select
-                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none"
+                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none outline-none"
               >
                 <option value="">Select Price Range</option>
                 <option value="free">Free</option>
@@ -217,7 +225,7 @@
 
             <div class="h-[42px] bg-white rounded-[10px] relative">
               <select
-                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none"
+                class="w-full h-full cursor-pointer text-base sm:text-[14px] font-normal font-outfit text-main pl-3 appearance-none outline-none"
               >
                 <option value="">Select Location</option>
                 <option value="office">Office</option>
@@ -508,7 +516,7 @@
     <div class="flex justify-end mt-20">
       <a
         class="w-[212px] max-sm:w-[100px] h-[50px] max-sm:h-[35px] bg-main text-white text-xl max-sm:text-xs font-outfit font-extrabold rounded-[5px] flex justify-center items-center cursor-pointer active:bg-main hover:bg-hover"
-        href="time&task.html"
+        href="../time&task page/time&task.html"
       >
         <div>NEXT PAGE</div>
       </a>
