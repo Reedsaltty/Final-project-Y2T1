@@ -59,9 +59,9 @@
       
       html += `
         <div class="grid grid-cols-4 grid-rows-1 font-outfit text-main font-normal justify-items-center items-center pt-5 pb-5" data-guest-id="${guest.id}">
-          <div class="guest-name">${guest.name}</div>
-          <div class="guest-email">${guest.email}</div>
-          <div class="guest-status">${getStatusText(guest.status)}</div>
+          <div class="guest-name max-md:text-lg ">${guest.name}</div>
+          <div class="guest-email max-md:text-lg  ">${guest.email}</div>
+          <div class="guest-status max-md:text-lg ">${getStatusText(guest.status)}</div>
           <div class="flex w-[70%] md:w-[50%] max-sm:w-[80%] h-[24px] bg-main text-white font-medium text-base rounded-[3px] pl-3 relative max-sm:text-xs">
             <select class="status-select appearance-none bg-transparent w-full outline-none cursor-pointer" data-guest-id="${guest.id}">
               <option value="pending" ${guest.status === 'pending' ? 'selected' : ''}>Pending</option>

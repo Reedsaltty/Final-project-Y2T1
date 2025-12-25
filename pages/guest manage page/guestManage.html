@@ -28,38 +28,53 @@
   </head>
   <body class="px-10 py-[56px]">
     <!-- TOP NAVIGATION -->
-    <div id="topNav" class="top-nav flex justify-between pb-[77px] w-full">
+    <nav id="topNav" class="top-nav flex justify-between pb-[77px] w-full">
       <!-- BACK BUTTON -->
-      <a
-        href="../eventcreation/evCreat.html"
-        id="backBtn"
-        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-[20px] max-sm:gap-1 max-md:gap-2 rounded-[20px] items-center"
+      <a 
+      href="../eventcreation/evCreat.html"
+        id="backButton"
+        class="backcta cursor-pointer hover:bg-hover active:bg-main flex w-[30%] h-[60px] bg-main justify-center gap-5 max-sm:gap-2  max-md:gap-2 rounded-[20px] items-center"
       >
-        <div class="w-[36px] h-[22px] max-sm:w-[28px] max-sm:h-[10px] max-sm:pl-1 ">
-          <svg viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div
+          class="w-[36px] h-[22px] max-sm:w-[28px] max-sm:h-[10px] max-sm:pl-1"
+        >
+          <svg
+            viewBox="0 0 36 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M12.7876 21.3628C12.1322 21.9505 11.1382 21.9461 10.4879 21.3527L0.651727 12.3752C-0.217259 11.5821 -0.217258 10.2138 0.651728 9.42072L10.4863 0.444742C11.1359 -0.148202 12.1305 -0.148201 12.7801 0.444742C13.518 1.11819 13.5196 2.27943 12.7835 2.95488L9.70334 5.78153C8.35983 7.01444 9.23212 9.25509 11.0556 9.25509H33.3903C34.2977 9.25509 35.0332 9.99062 35.0332 10.8979C35.0332 11.8053 34.2977 12.5408 33.3903 12.5408H11.0763C9.25016 12.5408 8.37923 14.787 9.72803 16.018L12.7988 18.8207C13.548 19.5045 13.5428 20.6857 12.7876 21.3628Z"
               fill="white"
             />
           </svg>
         </div>
-        <div class="text-white text-[20px] font-outfit max-sm:text-xs">Guest management</div>
+
+        <span id="backButtonText" class="text-white text-xl font-outfit max-md:text-sm">
+          Guest manager
+        </span>
       </a>
 
       <!-- HOME BUTTON -->
-      <a 
+      <a
       href="../homepage/home.html"
-        id="homeBtn"
+        id="homeButton"
         class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
       >
-        <svg width="32" height="25" viewBox="0 0 32 25" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="28"
+          height="21"
+          viewBox="0 0 32 25"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
             fill="#E3E3E3"
           />
         </svg>
       </a>
-    </div>
+    </nav>
 
     <div id="viewBox" class="viewBox">
       <div class="text-container pb-[20px]">
@@ -135,7 +150,7 @@
             <div id="attendingCount">2</div>
           </div>
           <div
-            class="w-[21%] h-[75px] max-sm:text-[10px] rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
+            class="w-[21%] h-[75px] max-sm:text-[10px] max-md:text-sm rounded-[5px] outline-1 outline-graytext font-outfit flex flex-col pl-5 gap-2 tracking-wide justify-center"
           >
             <div>Not attending</div>
             <div id="notAttendingCount">2</div>
