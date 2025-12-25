@@ -198,16 +198,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 12px;
 }
 
 .auth-actions .checkbox {
     display: flex;
-    align-items: center;
     gap: 8px;
     font-size: 14px;
     color: #333;
+    white-space: nowrap;
 }
 
 .primary_btn {
