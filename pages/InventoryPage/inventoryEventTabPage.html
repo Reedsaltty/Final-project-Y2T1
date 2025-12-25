@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hostor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main: #3a67de;
+        --font-outfit: "Outfit", sans-serif;
+        --font-merri: "Merriweather", serif;
+        --color-hover: #2555da;
+        --color-graytext: #a5a5a5;
+        --color-whiteButtonHover: #e7e7e7;
+      }
+      body {
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <body class="px-10 py-[56px]">
+    <!-- TOP NAVIGATION -->
+    <nav id="topNav" class="top-nav flex text-center items-center pb-[77px] w-full">
+      <!-- BACK BUTTON -->
+
+      <!-- HOME BUTTON -->
+      <a
+        href="../homepage/home.html"
+        id="homeButton"
+        class="homecta cursor-pointer hover:bg-hover active:bg-main flex bg-main w-[96px] h-[60px] justify-center rounded-[20px] items-center"
+      >
+        <svg
+          width="28"
+          height="21"
+          viewBox="0 0 32 25"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.81818 25V11.5441L1.74545 14.7059L0 12.3529L16 0L21.8182 4.48529V1.47059H26.1818V7.86765L32 12.3529L30.2545 14.7059L26.1818 11.5441V25H17.4545V16.1765H14.5455V25H5.81818ZM8.72727 22.0588H11.6364V13.2353H20.3636V22.0588H23.2727V9.30147L16 3.71324L8.72727 9.30147V22.0588ZM13.0909 10.3309H18.9091C18.9091 9.54657 18.6182 8.90319 18.0364 8.40074C17.4545 7.89828 16.7758 7.64706 16 7.64706C15.2242 7.64706 14.5455 7.89828 13.9636 8.40074C13.3818 8.90319 13.0909 9.54657 13.0909 10.3309Z"
+            fill="#E3E3E3"
+          />
+        </svg>
+      </a>
+    </nav>
+    <div class="flex flex-col gap-5">
+      <div
+        class="flex items-center justify-center gap-2 text-lg font-outfit font-bold gap-20"
+      >
+        <a
+        href="inventoryEventTabPage.html"
+          class="w-[235px] h-[45px] rounded-xl bg-main flex items-center justify-center text-white"
+          >Your Event</a
+        >
+        <a
+        href="inventoryInviteTabPage.html"
+          class="w-[235px] h-[45px] rounded-xl bg-white outline-1 outline-graytext flex items-center justify-center text-main"
+          >Invitation</a
+        >
+      </div>
+      <div class="w-full h-[10px] bg-main rounded-lg"></div>
+      <div class="grid grid-cols-5 auto-rows-auto">
+        <div
+          class="flex flex-col w-[250px] h-[300px] outline-1 outline-graytext py-5 px-5 font-outfit gap-5"
+        >
+          <div class="flex gap-3 items-center">
+            <img
+              src="../images/mona-lisa-meme-pfp-19.jpg "
+              class="rounded-[50px] w-[50px] h-[50px]"
+            />
+            <div class="font-bold">Ms. Mona Lisa</div>
+          </div>
+          <span class="font-bold text-xl">Pizza party</span>
+          <span class="font-bold text-3xl">7 day left</span>
+          <div class="flex flex-row justify-between">
+            <span>11:00</span>
+            <span>50/50</span>
+          </div>
+          <button class="w-[80px] h-[30px] bg-main text-white self-end active:bg-main hover:bg-hover">Edit</button>
+        </div>
+      </div>
+    </div>
+    <script src="guestManage.js"></script>
+  </body>
+</html>
