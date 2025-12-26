@@ -64,21 +64,36 @@ function setupTimeActivityForm() {
 function renderTimeline() {
   const timelineContainer = document.querySelector('.line1 .w-full.h-\\[400px\\]');
   
+  // Make container scrollable
+  timelineContainer.style.overflowY = 'auto';
+  timelineContainer.style.maxHeight = '400px';
+  
   // Clear existing content except the title
   timelineContainer.innerHTML = '';
   
   // Create title
   const title = document.createElement('div');
-  title.className = 'font-extrabold text-2xl self-center pt-8';
+  title.className = 'font-extrabold text-2xl self-center pt-8 pb-4';
   title.textContent = 'TIMELINE';
   timelineContainer.appendChild(title);
   
-  // If no activities, show default items
+  // Create scrollable content wrapper
+  const contentWrapper = document.createElement('div');
+  contentWrapper.className = 'flex flex-col gap-4 pb-4';
   
-  // Create activity items
-  timelineActivities.forEach(activity => {
-    createTimelineItem(timelineContainer, activity);
-  });
+  // If no activities, show default items
+  if (timelineActivities.length === 0) {
+    createDefaultTimelineItem(contentWrapper, 'Event Start', '09', '00', 'AM');
+    createDefaultTimelineItem(contentWrapper, 'Registration', '09', '30', 'AM');
+    createDefaultTimelineItem(contentWrapper, 'Main Session', '10', '00', 'AM');
+  } else {
+    // Create activity items
+    timelineActivities.forEach(activity => {
+      createTimelineItem(contentWrapper, activity);
+    });
+  }
+  
+  timelineContainer.appendChild(contentWrapper);
 }
 
 // Create a default timeline item (for display purposes)
@@ -180,27 +195,36 @@ function setupTaskForm() {
 function renderTasks() {
   const taskContainer = document.querySelector('.line2 .w-full.h-\\[400px\\]');
   
+  // Make container scrollable
+  taskContainer.style.overflowY = 'auto';
+  taskContainer.style.maxHeight = '400px';
+  
   // Clear existing content except the title
   taskContainer.innerHTML = '';
   
   // Create title
   const title = document.createElement('div');
-  title.className = 'font-extrabold text-2xl self-center pt-8';
+  title.className = 'font-extrabold text-2xl self-center pt-8 pb-4';
   title.textContent = 'Task';
   taskContainer.appendChild(title);
   
+  // Create scrollable content wrapper
+  const contentWrapper = document.createElement('div');
+  contentWrapper.className = 'flex flex-col gap-4 pb-4';
+  
   // If no tasks, show default items
   if (tasks.length === 0) {
-    createDefaultTask(taskContainer, 'Invite Mr. Beast');
-    createDefaultTask(taskContainer, 'Invite Mr. Beast');
-    createDefaultTask(taskContainer, 'Invite Mr. Beast');
-    return;
+    createDefaultTask(contentWrapper, 'Invite Mr. Beast');
+    createDefaultTask(contentWrapper, 'Book Venue');
+    createDefaultTask(contentWrapper, 'Order Catering');
+  } else {
+    // Create task items
+    tasks.forEach(task => {
+      createTaskItem(contentWrapper, task);
+    });
   }
   
-  // Create task items
-  tasks.forEach(task => {
-    createTaskItem(taskContainer, task);
-  });
+  taskContainer.appendChild(contentWrapper);
 }
 
 // Create a default task item (for display purposes)
